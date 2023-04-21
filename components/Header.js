@@ -92,35 +92,15 @@ export default function Header ({ navBarTitle, fullWidth }) {
         ref={navRef}
         onClick={handleClickHeader}
       >
-        <svg
- width="24"
- height="24"
- viewBox="0 0 24 24"
- fill="none"
- xmlns="http://www.w3.org/2000/svg"
->
- <rect
-  width="24"
-  height="24"
-  className="fill-current text-black dark:text-white"
- />
- <rect width="24" height="24" fill="url(#paint0_radial)" />
-  <defs>
-   <radialGradient
-    id="paint0_radial"
-    cx="0"
-    cy="0"
-    r="1"
-    gradientUnits="userSpaceOnUse"
-    gradientTransform="rotate(45) scale(39.598)"
-   >
-    <stop stopColor="#CFCFCF" stopOpacity="0.6" />
-{/* 渐变左上角的颜色。把 #CFCFCF 替换成想要的颜色，把 0.6 替换成想要的透明度 */}
-    <stop offset="1" stopColor="#E9E9E9" stopOpacity="0" />
-{/* 渐变右下角的颜色。把 #E9E9E9 替换成想要的颜色，把 0 替换成想要的透明度。1是完全不透明，0是完全透明*/}
-   </radialGradient>
-  </defs>
-</svg>
+       <svg
+          viewBox="0 0 24 24"
+          className="caret w-6 h-6 absolute inset-x-0 bottom-0 mx-auto pointer-events-none opacity-30 group-hover:opacity-100 transition duration-100"
+        >
+          <path
+            d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z"
+            className="fill-black dark:fill-white"
+          />
+        </svg>
         <div className="flex items-center">
           <Link href="/" aria-label={BLOG.title}>
             <Image
